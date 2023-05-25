@@ -1,0 +1,12 @@
+python run_clm.py \
+	    --model_type gpt2 \
+	    --config_overrides="n_layer=10,vocab_size=100" \
+	    --dataset_name Zaid/ashaar_dataset \
+	    --tokenizer_name Zaid/ashaar_tokenizer \
+	    --per_device_train_batch_size 16 \
+	    --per_device_eval_batch_size 4 \
+	    --do_train \
+	    --do_eval \
+	    --num_train_epochs=100 \
+	    --output_dir gpt_results_fix_tokens \
+	    --report_to="wandb"  
